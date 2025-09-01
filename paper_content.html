@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Content - 低功耗毫米波智能波束赋形系统</title>
+    <style>
+        /* 基础样式：保证可读性与简洁性 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        /* 标题样式：区分层级 */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin: 20px 0 30px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+        }
+        h3 {
+            color: #34495e;
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+        }
+        /* 段落与列表样式：优化阅读体验 */
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        ul {
+            margin: 10px 0 10px 25px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        /* 重点内容高亮：突出关键数据 */
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* 页脚样式 */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 海报标题与作者信息 -->
+    <h1>Poster Content (Assist in the explanation)</h1>
+    <p><strong>Author:</strong> Jun Wei Zhang, Southeast University, China</p>
+    <p><strong>Poster Title:</strong> A Low-Power Smart Millimeter-Wave Beamforming System for Base Station Application Based on Programmable Metasurfaces</p>
+
+    <!-- 背景部分 -->
+    <h2>1. Background</h2>
+    <p>As 6G development accelerates, millimeter-wave (mmWave) base stations are key to boosting next-gen communication capabilities from ultra-high data rates to low-latency connections. Yet, their deployment and large-scale adoption are still hindered by three critical, unresolved challenges:</p>
+    <ul>
+        <li>MmWave signals degrade severely in transmission due to obstructions and attenuation</li>
+        <li>Conventional mmWave base station front-end hardware has high complexity and costs</li>
+        <li>Existing mmWave base stations suffer from excessive operational power and usage costs</li>
+    </ul>
+    <p>Nowadays, programmable metasurfaces, capable of dynamic EM (Electromagnetic) manipulation and beamforming, offer a promising avenue to balance performance, cost, efficiency, and power consumption in communication networks. They are suitable for such scenarios and have the potential to construct a new type of mmWave beamforming hardware architecture, which can assist in the development and implementation of mmWave base stations.</p>
+
+    <!-- 核心工作要点 -->
+    <h2>2. Main Points of this Work</h2>
+    <p>In this work, we propose a low-power millimeter-wave beamforming system for base station application based on programmable metasurfaces. It integrates four discone antenna feeds, four 30×30 2-bit phase modulation programmable metasurfaces, and four high-performance control boards.</p>
+    <p>The mmWave beamforming system exhibits the following key abilities:</p>
+    <ul>
+        <li>Dynamic phase modulation and flexible beam scanning (<span class="highlight">-70°&lt;θ&lt;70°, 0°&lt;φ&lt;360°</span>)</li>
+        <li>High-performance control board and beam switching rates (<span class="highlight">>500 KHz</span>)</li>
+        <li>Independent four-stream data transmission</li>
+        <li>Low power consumption (<span class="highlight">48 W for 60×60 2-bit elements</span>)</li>
+    </ul>
+    <p>Next, detailed introductions to each part are provided below.</p>
+
+    <!-- 硬件系统构建 -->
+    <h2>3. Construction of the Hardware System</h2>
+    <h3>3.1 Feeding Antenna</h3>
+    <p>We designed a feeding discone antenna that operates in the unit's working frequency band. The antenna possesses a wide beam, high gain, and backward propagation capabilities, and is well integrated with the designed array. The S11 parameter and radiation pattern of the antenna are shown in the poster.</p>
+
+    <h3>3.2 2-bit Metasurface</h3>
+    <p>We designed a mmWave metasurface unit, which includes five dielectric layers, one functional layer, one ground layer, four feed layers, and the adhesive layers. Two integrated PIN diodes have four ON/OFF state combinations, corresponding to four (2-bit) electromagnetic (EM) phase responses.</p>
+    <p>The designed unit exhibits good 2-bit phase modulation capability under oblique incidence angles of 0° to 30° in the two modes within the <span class="highlight">24.5–25.5 GHz</span> band. The unit was then arranged to construct a 30×30 large-scale array, comprising 900 units and 1800 PIN diodes. Since each unit requires independent control of its EM response, we designed 4 control network layers on the backside, with approximately 2000 signal lines.</p>
+
+    <h3>3.3 Control Board</h3>
+    <p>We designed a control board to accommodate the needs of 2000 independent I/O ports. We adopted a combined serial-parallel multi-channel current-driven control architecture, utilizing an 18-layer Printed Circuit Board (PCB) technique with current driver chips to achieve independent control of 2000 signals. We also established a software and hardware platform to effectively control each unit.</p>
+    <p>We removed a 4×4 section of units in the center of the array to insert the feeding antenna and reserved a corresponding assembly position on the control board. We assembled them according to this framework and secured them with screws. Additionally, we fabricated two mirrored versions of this system and constructed a four-stream mmWave metasurface-based beamforming system.</p>
+
+    <!-- 波束赋形系统性能 -->
+    <h2>4. Properties of the Beamforming System</h2>
+    <h3>4.1 Beam Scanning (-70°&lt;θ&lt;70°, 0°&lt;φ&lt;360°)</h3>
+    <p>To achieve precise beam scanning of the designed system, we first calculated the array phase distribution under the designed beam pointing directions using phased array theory and the initial phase. We then discretized the phase into a 2-bit format achievable by the proposed system.</p>
+    <p>Subsequently, the far-field radiation pattern corresponding to the coding sequences could be rapidly derived using far-field scattering pattern theory. We then conducted calculations, simulations, and measurements for the system’s beam scanning. The results verified that, at the ϕ=0° and 45° planes, all results agreed well and demonstrated that the elevation beam pointing could be adjusted from −70° to 70° at 10° intervals.</p>
+
+    <h3>4.2 Beam Switching (> 500 KHz)</h3>
+    <p>We configured the control board's voltage output to generate square waves with high-low voltage switching. Using an oscilloscope, we then tested the real-time switching rate of the diodes' voltage and confirmed that their achievable real-time switching rate reaches <span class="highlight">500 kHz</span>.</p>
+
+    <h3>4.3 Low-Power Consumption (~ 48 W)</h3>
+    <p>For the proposed system, we adopted a serial-parallel conversion control architecture with one FPGA, selected low-power PIN diodes as tunable devices, and operated them at the minimum forward conduction voltage and current to reduce power consumption.</p>
+    <p>We practically measured the standby and operational power consumption of the beamforming system, which are approximately <span class="highlight">5 W</span> and <span class="highlight">12 W</span>, respectively. The operating power consumption of the 4-stream system is about <span class="highlight">48 W</span>. In contrast, a conventional millimeter-wave phased array antenna with 60×60 channel TR modules has an operating power consumption of approximately <span class="highlight">375 W</span>.</p>
+
+    <!-- 毫米波无线通信应用 -->
+    <h2>5. Beamforming System-Assisted mmW Wireless Communication</h2>
+    <p>We built a wireless communication system with the proposed metasurface system as its core component, and set up a multi-user indoor communication scenario where each standard horn antenna served as a user terminal for information reception.</p>
+    <p>Specifically, the millimeter-wave metasurface beamforming system was deployed as the base station’s transmit front-end, and video transmission was implemented via software-defined radio (SDR) for both signal transmission and reception. Experimental results indicate that normal constellation diagram decoding and video transmission were only achieved when the metasurface communication system was operational, and information transmission among the four users was mutually independent.</p>
+
+    <!-- 结论 -->
+    <h2>6. Conclusion</h2>
+    <p>A summary table of the overall performance of our proposed system is presented in the poster. As a large-scale physical architecture for a millimeter-wave programmable metasurface-based beamforming system, it enables low-power real-time beamforming, which can facilitate signal focusing and deflection.</p>
+    <p>This provides a novel energy-efficient and high-gain solution for the future 6G communication network architecture.</p>
+
+    <!-- 致谢 -->
+    <footer>
+        <p>I greatly appreciate your support!</p>
+    </footer>
+</body>
+</html>
